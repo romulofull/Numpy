@@ -82,3 +82,30 @@ a= temperaturas.reshape((2,14))
 print(a)
 b= np.corrcoef(temperaturas)
 print(b)
+
+
+import matplotlib.pyplot as plt
+estado = np.array(["desaprobados", "aprobados","promocionados"])
+cantidad= np.array([2,10,7])
+plt.bar(estado,cantidad)
+plt.title('Cantidad de personas segun su estado')
+plt.show()
+
+plt.pie(cantidad, labels=estado)
+plt.title('Cantidad de personas según su estado')
+plt.show()
+
+meses= np.array(["Enero","Febrero","Marzo","Abril"])
+ventas= np.array ([1500, 2200, 1800, 2500])
+plt.plot(meses,ventas)
+plt.title('Ventas Mensuales')
+plt.xlabel('Meses')
+plt.ylabel('Ventas')
+plt.show()
+
+notas= np.array([72,85,92,78,65,88,95,60,70,82,90,76,84,73,88,79,93,68,87,91])
+plt.hist(notas, bins=10, edgecolor= 'black')
+plt.title('Notas de exámenes')
+plt.xlabel('Notas')
+plt.ylabel('Frecuencia')
+plt.show()
